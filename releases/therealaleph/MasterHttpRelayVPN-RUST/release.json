@@ -1,0 +1,7 @@
+{
+  "tag": "v1.6.3",
+  "status": "stable",
+  "published_at": "2026-04-25T21:41:17Z",
+  "filter_pattern": "android-arm64-v8a|android-armeabi-v7a|android-universal|macos-amd64-app|macos-arm64-app|windows-amd64",
+  "updated_at": "2026-04-25T23:03:41Z"
+}
