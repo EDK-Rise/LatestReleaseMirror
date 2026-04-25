@@ -1,0 +1,10 @@
+therealaleph/MasterHttpRelayVPN-RUST|android|windows|darwin|macos|\.apk|\.exe|\.dmg|\.msi
+NullLatency/FlowDriver
+SagerNet/sing-box|windows-amd64|darwin-amd64.tar.gz|darwin-arm64|arm64-v8a.apk
+KaringX/karing|arm64-v8a.apk|macos_universal.dmg|windows_x64.exe
+net2share/vaydns|client-darwin-amd64|client-darwin-arm64|client-windows-amd64.exe
+2dust/v2rayN|macos-64.dmg|windows-64-desktop.zip
+2dust/v2rayNG|arm64-v8a.apk|universal.apk
+masterking32/MasterDnsVPN|Client_MacOS_AMD64.zip|Client_MacOS_ARM64.zip|Client_Windows_AMD64.zip|Client_Termux_ARM64.zip|Client_Termux_ARMV7.zip
+termux/termux-app|arm64-v8a.apk|universal.apk|armeabi-v7a.apk
+anonvector/SlipNet|arm64-v8a.apk|armeabi-v7a.apk|universal.apk
