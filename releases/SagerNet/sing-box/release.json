@@ -1,0 +1,7 @@
+{
+  "tag": "v1.13.11",
+  "status": "stable",
+  "published_at": "2026-04-23T00:44:08Z",
+  "filter_pattern": "windows-amd64|darwin-amd64.tar.gz|darwin-arm64|arm64-v8a.apk",
+  "updated_at": "2026-04-25T23:04:06Z"
+}
