@@ -1,0 +1,93 @@
+name: Update README from releases folder
+
+on:
+  push:
+    paths:
+      - 'tree.md'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Update README between markers
+        run: |
+          # Ensure README.md exists and has markers
+          if [ ! -f README.md ]; then
+            printf '# ReleaseCollector\n\n' > README.md
+            printf 'Automatically syncs the latest release from multiple GitHub repositories.\n\n' >> README.md
+            printf '<!-- RELEASES_START -->\n' >> README.md
+            printf '<!-- RELEASES_END -->\n' >> README.md
+          fi
+
+          if ! grep -q "<!-- RELEASES_START -->" README.md; then
+            printf '\n<!-- RELEASES_START -->\n' >> README.md
+            printf '<!-- RELEASES_END -->\n' >> README.md
+          fi
+
+          # Generate new release table
+          TABLE=$(mktemp)
+          first=true
+          find releases -type f -name ".version" -printf "%h\n" | sort | while read -r repo_dir; do
+            asset_count=$(find "$repo_dir" -type f ! -name ".version" ! -name "release.json" | wc -l)
+            [ "$asset_count" -eq 0 ] && continue
+
+            owner=$(basename "$(dirname "$repo_dir")")
+            repo=$(basename "$repo_dir")
+            tag=$(cat "$repo_dir/.version")
+            url="https://github.com/$owner/$repo"
+            anchor=$(echo "${owner}--${repo}" | tr '[:upper:]' '[:lower:]')
+
+            if [ "$first" = false ]; then
+              echo "" >> "$TABLE"
+              echo "---" >> "$TABLE"
+              echo "" >> "$TABLE"
+            fi
+            first=false
+
+            echo "<div id=\"$anchor\"></div>" >> "$TABLE"
+            echo "" >> "$TABLE"
+            echo "### $owner--$repo" >> "$TABLE"
+            echo "" >> "$TABLE"               # <-- BLANK LINE AFTER HEADING
+            echo "🔗 [source]($url) – <code><small>$tag</small></code>" >> "$TABLE"
+            echo "" >> "$TABLE"
+            echo "| File | Size | Download |" >> "$TABLE"
+            echo "|------|------|----------|" >> "$TABLE"
+
+            find "$repo_dir" -type f ! -name ".version" ! -name "release.json" -printf "%f\n" | sort | while read -r asset; do
+              asset_path="$repo_dir/$asset"
+              size=$(stat -c%s "$asset_path" 2>/dev/null || stat -f%z "$asset_path" 2>/dev/null)
+              if [ "$size" -lt 1048576 ]; then
+                s="$((size/1024)) KB"
+              else
+                sm=$(echo "scale=1; $size / 1048576" | bc)
+                s="${sm} MB"
+              fi
+              link="https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/$asset_path"
+              echo "| \`$asset\` | $s | [⬇️ Download]($link) |" >> "$TABLE"
+            done
+          done
+
+          # Replace content between markers using awk
+          awk -v start="<!-- RELEASES_START -->" -v end="<!-- RELEASES_END -->" -v new="$(cat "$TABLE")" '
+            BEGIN { p=1 }
+            $0 == start { print; print new; p=0; next }
+            $0 == end { p=1; print; next }
+            p==1 { print }
+          ' README.md > README.tmp && mv README.tmp README.md
+
+          git add README.md
+          git diff --staged --quiet || git commit -m "Update README between markers (blank line after heading)"
+          git push
