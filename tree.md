@@ -45,12 +45,12 @@
 ├── termux/termux-app [https://github.com/termux/termux-app] [v0.118.3]
 │   ├── termux-app_v0.118.3+github-debug_arm64-v8a.apk [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/termux/termux-app/termux-app_v0.118.3+github-debug_arm64-v8a.apk) - <small>33.4 MB</small>
 │   ├── termux-app_v0.118.3+github-debug_armeabi-v7a.apk [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/termux/termux-app/termux-app_v0.118.3+github-debug_armeabi-v7a.apk) - <small>30.7 MB</small>
-├── therealaleph/MasterHttpRelayVPN-RUST [https://github.com/therealaleph/MasterHttpRelayVPN-RUST] [v1.6.5]
-│   ├── mhrv-rs-android-arm64-v8a-v1.6.5.apk [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-android-arm64-v8a-v1.6.5.apk) - <small>17.6 MB</small>
-│   ├── mhrv-rs-android-armeabi-v7a-v1.6.5.apk [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-android-armeabi-v7a-v1.6.5.apk) - <small>15.3 MB</small>
-│   ├── mhrv-rs-android-universal-v1.6.5.apk [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-android-universal-v1.6.5.apk) - <small>38.1 MB</small>
-│   ├── mhrv-rs-android-x86-v1.6.5.apk [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-android-x86-v1.6.5.apk) - <small>18.2 MB</small>
-│   ├── mhrv-rs-android-x86_64-v1.6.5.apk [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-android-x86_64-v1.6.5.apk) - <small>18.5 MB</small>
+├── therealaleph/MasterHttpRelayVPN-RUST [https://github.com/therealaleph/MasterHttpRelayVPN-RUST] [v1.7.0]
+│   ├── mhrv-rs-android-arm64-v8a-v1.7.0.apk [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-android-arm64-v8a-v1.7.0.apk) - <small>17.6 MB</small>
+│   ├── mhrv-rs-android-armeabi-v7a-v1.7.0.apk [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-android-armeabi-v7a-v1.7.0.apk) - <small>15.4 MB</small>
+│   ├── mhrv-rs-android-universal-v1.7.0.apk [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-android-universal-v1.7.0.apk) - <small>38.3 MB</small>
+│   ├── mhrv-rs-android-x86-v1.7.0.apk [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-android-x86-v1.7.0.apk) - <small>18.3 MB</small>
+│   ├── mhrv-rs-android-x86_64-v1.7.0.apk [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-android-x86_64-v1.7.0.apk) - <small>18.6 MB</small>
 │   ├── mhrv-rs-linux-amd64.tar.gz [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-linux-amd64.tar.gz) - <small>8.0 MB</small>
 │   ├── mhrv-rs-linux-arm64.tar.gz [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-linux-arm64.tar.gz) - <small>1.7 MB</small>
 │   ├── mhrv-rs-linux-musl-amd64.tar.gz [Download](https://raw.githubusercontent.com/Ehs6n/LatestReleaseMirror/main/releases/therealaleph/MasterHttpRelayVPN-RUST/mhrv-rs-linux-musl-amd64.tar.gz) - <small>1.9 MB</small>
